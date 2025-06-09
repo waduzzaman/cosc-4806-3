@@ -1,7 +1,7 @@
 <footer class="bg-gray-900 text-white py-6 mt-12">
   <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
     <p class="text-sm md:text-base text-center md:text-left">
-      &copy; <?php echo date('Y'); ?> All rights reserved.
+      &copy; <?php echo date('Y'); ?> Md Mahbub E Waduzzaman All rights reserved.
     </p>
 
     <div class="flex space-x-6">
@@ -23,11 +23,7 @@
         </svg>
       </a>
 
-      <a href="mailto:you@example.com" class="hover:text-red-400" aria-label="Email">
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-          <path d="M4 4h16a2 2 0 0 1 2 2v1.2l-10 5.6L2 7.2V6a2 2 0 0 1 2-2Zm0 4.4 8 4.4 8-4.4V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8.4Z" />
-        </svg>
-      </a>
+   
     </div>
   </div>
 </footer>

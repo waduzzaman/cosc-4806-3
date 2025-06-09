@@ -81,7 +81,7 @@ class User {
         }
     }
 
-    // Optional method to check if user is authenticated
+    // method to check if user is authenticated
     public function isAuthenticated() {
         return isset($_SESSION['auth']) && $_SESSION['auth'] === 1;
     }

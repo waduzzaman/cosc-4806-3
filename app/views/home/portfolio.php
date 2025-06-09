@@ -11,8 +11,8 @@
                 <h2 class="card-title">Project One</h2>
                 <p>A responsive e-commerce website built with React and Node.js.</p>
                 <div class="card-actions justify-end">
-                    <a href="https://github.com/yourusername/project1" target="_blank" class="btn btn-primary btn-sm">View Code</a>
-                    <a href="https://project1.demo.com" target="_blank" class="btn btn-secondary btn-sm">Live Demo</a>
+                    <a href="#" target="_blank" class="btn btn-primary btn-sm">View Code</a>
+                    <a href="https://top-tourism-management.netlify.app/" target="_blank" class="btn btn-secondary btn-sm">Live Demo</a>
                 </div>
             </div>
         </div>
@@ -24,8 +24,8 @@
                 <h2 class="card-title">Project Two</h2>
                 <p>A blogging platform with user authentication and content management.</p>
                 <div class="card-actions justify-end">
-                    <a href="https://github.com/yourusername/project2" target="_blank" class="btn btn-primary btn-sm">View Code</a>
-                    <a href="https://project2.demo.com" target="_blank" class="btn btn-secondary btn-sm">Live Demo</a>
+                    <a href="#" target="_blank" class="btn btn-primary btn-sm">View Code</a>
+                    <a href="https://community-library-d20f8.web.app/" target="_blank" class="btn btn-secondary btn-sm">Live Demo</a>
                 </div>
             </div>
         </div>
@@ -37,13 +37,13 @@
                 <h2 class="card-title">Project Three</h2>
                 <p>A social media app with real-time chat features built with Firebase.</p>
                 <div class="card-actions justify-end">
-                    <a href="https://github.com/yourusername/project3" target="_blank" class="btn btn-primary btn-sm">View Code</a>
-                    <a href="https://project3.demo.com" target="_blank" class="btn btn-secondary btn-sm">Live Demo</a>
+                    <a href="https://github.com/waduzzaman/ak-marketings" target="_blank" class="btn btn-primary btn-sm">View Code</a>
+                    <a href="https://www.akmarketings.com/" target="_blank" class="btn btn-secondary btn-sm">Live Demo</a>
                 </div>
             </div>
         </div>
 
-        <!-- Add more project cards as needed -->
+       
     </div>
 </div>
 

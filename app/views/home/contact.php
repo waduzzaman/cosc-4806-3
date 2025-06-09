@@ -7,6 +7,7 @@
             Have a question, idea, or project you’d like to discuss? Fill out the form below or email me directly. I’ll get back to you as soon as possible.
         </p>
     </div>
+    <!--  Contact form start-->
 
     <form action="/contact" method="POST" class="bg-white shadow-md rounded-lg p-8 space-y-6">
         <div>
@@ -34,6 +35,7 @@
             </button>
         </div>
     </form>
+    <!--  Contact form end-->
 </div>
 
 <?php require_once 'app/views/templates/footer.php'; ?>

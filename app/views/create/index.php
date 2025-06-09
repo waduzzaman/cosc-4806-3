@@ -1,3 +1,4 @@
+
 <?php require_once 'app/views/templates/headerPublic.php'; ?>
 <main class="container mx-auto px-4 py-10">
     <div class="max-w-md mx-auto bg-white shadow-md rounded-lg p-6">
@@ -6,6 +7,8 @@
         <?php if (isset($error)) : ?>
             <p class="text-red-600 text-sm mb-4 text-center"><?= $error; ?></p>
         <?php endif; ?>
+
+        <!-- New user registration form start -->
 
         <form action="/create/store" method="POST" class="space-y-5">
             <div>
@@ -33,6 +36,8 @@
                 </button>
             </div>
         </form>
+        <!-- New user registration form end -->
     </div>
 </main>
+<!-- common footer -->
 <?php require_once 'app/views/templates/footer.php'; ?>

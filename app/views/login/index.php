@@ -1,3 +1,5 @@
+
+
 <?php require_once 'app/views/templates/headerPublic.php' ?>
 <main role="main" class="container mx-auto px-4 py-12">
 
@@ -30,7 +32,7 @@
 								<input required type="password" name="password" id="password"
 										class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
 						</div>
-
+				
 						<div class="pt-4">
 								<button type="submit"
 										class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300">
@@ -50,3 +52,4 @@
 		</div>
 </main>
 <?php require_once 'app/views/templates/footer.php' ?>
+

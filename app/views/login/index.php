@@ -1,9 +1,23 @@
 <?php require_once 'app/views/templates/headerPublic.php' ?>
 <main role="main" class="container mx-auto px-4 py-12">
 
+	<!-- login aattenmp -->
+	<!-- Show lockout message if set -->
+	<?php if (isset($_SESSION['lockout'])) : ?>
+			<p class="text-red-600 text-center mb-4"><?= $_SESSION['lockout']; ?></p>
+			<?php unset($_SESSION['lockout']); ?>
+	<?php endif; ?>
+
 		<div class="max-w-xl mx-auto bg-white shadow-md rounded-lg p-8">
 				<h1 class="text-2xl font-bold text-center text-red-600 mb-6">You are not logged in</h1>
 
+			<!-- Show lockout message if set -->
+				<?php if (isset($_SESSION['lockout'])) : ?>
+						<p class="text-red-600 text-center mb-4"><?= $_SESSION['lockout']; ?></p>
+						<?php unset($_SESSION['lockout']); ?>
+				<?php endif; ?>
+
+			<!-- login form -->
 				<form action="/login/verify" method="post" class="space-y-6">
 						<div>
 								<label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>

@@ -1,7 +1,10 @@
 <?php require_once 'app/views/templates/header.php' ?>
 <div class="max-w-4xl mx-auto px-4 py-12">
     <div class="mb-8 text-center lg:text-left">
-        <h1 class="text-4xl font-bold text-gray-800">Hey 👋</h1>
+        <h1 class="text-4xl font-bold text-gray-800">
+            Hey 👋 <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?>
+        </h1>
+
         <p class="text-lg text-gray-600 mt-2"><?= date("F jS, Y"); ?></p>
     </div>
 

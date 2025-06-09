@@ -10,4 +10,9 @@ class Home extends Controller {
 	    die;
     }
 
+  public function about() {
+      $this->view('home/about');
+      die;
+  }
+
 }

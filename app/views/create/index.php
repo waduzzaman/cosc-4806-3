@@ -1,7 +1,7 @@
 <?php require_once 'app/views/templates/headerPublic.php'; ?>
 <main class="container mx-auto px-4 py-10">
     <div class="max-w-md mx-auto bg-white shadow-md rounded-lg p-6">
-        <h1 class="text-xl font-semibold text-center text-blue-600 mb-6">Create a New Account</h1>
+        <h1 class="text-xl font-bold text-center text-blue-600 mb-6">Create a New Account</h1>
 
         <?php if (isset($error)) : ?>
             <p class="text-red-600 text-sm mb-4 text-center"><?= $error; ?></p>

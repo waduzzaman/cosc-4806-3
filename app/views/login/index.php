@@ -3,7 +3,7 @@
 <?php require_once 'app/views/templates/headerPublic.php' ?>
 <main role="main" class="container mx-auto px-4 py-12">
 
-	<!-- login aattenmp -->
+	<!-- login attemp -->
 	<!-- Show lockout message if set -->
 	<?php if (isset($_SESSION['lockout'])) : ?>
 			<p class="text-red-600 text-center mb-4"><?= $_SESSION['lockout']; ?></p>
@@ -11,7 +11,10 @@
 	<?php endif; ?>
 
 		<div class="max-w-xl mx-auto bg-white shadow-md rounded-lg p-8">
-				<h1 class="text-2xl font-bold text-center text-red-600 mb-6">You are not logged in</h1>
+			<h1 class="text-2xl  font-bold text-center text-blue-600 mb-6">
+					Welcome! <br/> Please log in to access the full site.
+			</h1>
+
 
 			<!-- Show lockout message if set -->
 				<?php if (isset($_SESSION['lockout'])) : ?>

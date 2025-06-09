@@ -1,11 +1,26 @@
-<?php require_once 'app/views/templates/header.php' ?>
+<?php 
+session_start();
+if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== 1) {
+    header('Location: /login');
+    exit;
+}
+require_once 'app/views/templates/header.php';
+?>
+
 <div class="max-w-4xl mx-auto px-4 py-12">
     <div class="mb-8 text-center lg:text-left">
-        <h1 class="text-4xl font-bold text-gray-800">
-            Hey 👋 <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?>
+        <h1 class="text-4xl font-bold text-gray-800 mb-2">
+            Welcome, <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?>! 👋
         </h1>
+        <p class="text-lg text-gray-600"><?= date("F jS, Y"); ?></p>
+    </div>
 
-        <p class="text-lg text-gray-600 mt-2"><?= date("F jS, Y"); ?></p>
+    <div class="mb-10 text-center lg:text-left">
+        <p class="text-lg text-gray-700 leading-relaxed">
+            I'm glad you're here! This website is a personal space where I share a bit about myself, my technical skills, and past web development projects.
+            Feel free to browse the <a href="/about" class="text-blue-600 underline hover:text-blue-800">About Me</a> page to know more about me,
+            or head over to the <a href="/portfolio" class="text-blue-600 underline hover:text-blue-800">Portfolio</a> to see some of my work.
+        </p>
     </div>
 
     <div class="text-center lg:text-left">
@@ -17,4 +32,4 @@
     </div>
 </div>
 
-<?php require_once 'app/views/templates/footer.php' ?>
+<?php require_once 'app/views/templates/footer.php'; ?>

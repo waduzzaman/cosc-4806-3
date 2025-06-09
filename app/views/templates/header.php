@@ -8,6 +8,10 @@ if (!isset($_SESSION['auth'])) {
 <head>
     <!-- ✅ Add Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+  
+<!-- daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="icon" href="/favicon.png">
     <title>COSC 4806</title>
@@ -19,31 +23,44 @@ if (!isset($_SESSION['auth'])) {
 <body class="bg-gray-100 text-gray-900">
 
 <!-- ✅ Tailwind Navbar -->
-<nav class="bg-white shadow-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16">
-      <div class="flex">
-        <a href="#" class="text-xl font-bold text-blue-600 flex items-center">COSC 4806</a>
-        <div class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
-          <a href="/home" class="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm font-medium text-blue-700">Home</a>
-          <a href="/about" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">About Me</a>
-          <div class="relative group">
-            <button class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-700">
-              Dropdown
-              <svg class="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.292l3.71-4.06a.75.75 0 011.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0L5.25 8.27a.75.75 0 01-.02-1.06z" clip-rule="evenodd" />
-              </svg>
-            </button>
-            <div class="absolute z-10 hidden group-hover:block bg-white shadow-lg mt-2 rounded-md w-48">
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Action</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Another action</a>
-              <div class="border-t border-gray-200"></div>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Something else here</a>
-            </div>
-          </div>
-          <span class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-400 cursor-not-allowed">Disabled</span>
+  <div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
         </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+          <li><a>Item 1</a></li>
+          <li>
+            <a>Parent</a>
+            <ul class="p-2">
+              <li><a>Submenu 1</a></li>
+              <li><a>Submenu 2</a></li>
+            </ul>
+          </li>
+          <li><a>Item 3</a></li>
+        </ul>
       </div>
+      <a class="btn btn-ghost text-xl">daisyUI</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a>Item 1</a></li>
+        <li>
+          <details>
+            <summary>Parent</summary>
+            <ul class="p-2">
+              <li><a>Submenu 1</a></li>
+              <li><a>Submenu 2</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a class="btn">Button</a>
     </div>
   </div>
-</nav>

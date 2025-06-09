@@ -19,4 +19,9 @@ class Home extends Controller {
         $this->view('home/portfolio');
         die;
     }
+
+  public function contact() {
+      $this->view('home/contact');
+    die;
+  }
 }

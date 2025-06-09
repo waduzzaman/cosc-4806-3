@@ -1,32 +1,74 @@
-<?php require_once 'app/views/templates/header.php'; ?>
+<?php require_once 'app/views/templates/headerPublic.php' ?>
+<main role="main" class="container mx-auto px-4 py-12 max-w-lg">
+  <div class="bg-white shadow-lg rounded-lg p-8">
+    <h1 class="text-3xl font-semibold mb-6 text-center text-blue-700">Create New Account</h1>
 
-<div class="max-w-md mx-auto mt-12 p-6 bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-semibold mb-6 text-gray-800">Create New User</h2>
+    <form action="/create/store" method="post" id="createUserForm" class="space-y-6">
+      <div>
+        <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+        <input required type="text" name="username" id="username" placeholder="Enter username"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
 
-    <form action="/create/store" method="POST" class="space-y-5">
-        <div>
-            <label for="username" class="block mb-1 font-medium text-gray-700">Username</label>
-            <input type="text" name="username" id="username" required
-                class="input input-bordered w-full" placeholder="Enter username" />
-        </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <input required type="email" name="email" id="email" placeholder="Enter email"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
 
-        <div>
-            <label for="email" class="block mb-1 font-medium text-gray-700">Email</label>
-            <input type="email" name="email" id="email" required
-                class="input input-bordered w-full" placeholder="Enter email" />
-        </div>
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+        <input required type="password" name="password" id="password" placeholder="Enter password"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
 
-        <div>
-            <label for="password" class="block mb-1 font-medium text-gray-700">Password</label>
-            <input type="password" name="password" id="password" required
-                class="input input-bordered w-full" placeholder="Enter password" />
-        </div>
+      <div>
+        <label for="confirm_password" class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+        <input required type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <p id="passwordMatchMsg" class="mt-1 text-sm"></p>
+      </div>
 
+      <div>
         <button type="submit" 
-            class="btn btn-primary w-full mt-4">
-            Create User
+          class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-colors duration-300 font-semibold">
+          Create Account
         </button>
+      </div>
     </form>
-</div>
+  </div>
 
-<?php require_once 'app/views/templates/footer.php'; ?>
+  <script>
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirm_password');
+    const message = document.getElementById('passwordMatchMsg');
+    const form = document.getElementById('createUserForm');
+
+    function validatePasswords() {
+      if (confirmPassword.value === "") {
+        message.textContent = "";
+        return true;
+      }
+      if (password.value === confirmPassword.value) {
+        message.textContent = "Passwords match";
+        message.className = "mt-1 text-sm text-green-600";
+        return true;
+      } else {
+        message.textContent = "Passwords do not match";
+        message.className = "mt-1 text-sm text-red-600";
+        return false;
+      }
+    }
+
+    confirmPassword.addEventListener('input', validatePasswords);
+    password.addEventListener('input', validatePasswords);
+
+    form.addEventListener('submit', function (e) {
+      if (!validatePasswords()) {
+        e.preventDefault();
+        confirmPassword.focus();
+      }
+    });
+  </script>
+</main>
+<?php require_once 'app/views/templates/footer.php' ?>

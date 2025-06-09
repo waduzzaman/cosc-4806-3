@@ -1,18 +1,17 @@
 <?php require_once 'app/views/templates/header.php' ?>
-<div class="container">
-    <div class="page-header" id="banner">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Hey</h1>
-                <p class="lead"> <?= date("F jS, Y"); ?></p>
-            </div>
-        </div>
+<div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="mb-8 text-center lg:text-left">
+        <h1 class="text-4xl font-bold text-gray-800">Hey 👋</h1>
+        <p class="text-lg text-gray-600 mt-2"><?= date("F jS, Y"); ?></p>
     </div>
 
-    <div class="row">
-        <div class="col-lg-12">
-            <p class="btn btn-outline btn-info mt-4"> <a href="/logout">Click here to logout</a></p>
-        </div>
+    <div class="text-center lg:text-left">
+        <a href="/logout" 
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-7 rounded-lg shadow-md 
+                  transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            Logout
+        </a>
     </div>
+</div>
 
-    <?php require_once 'app/views/templates/footer.php' ?>
+<?php require_once 'app/views/templates/footer.php' ?>

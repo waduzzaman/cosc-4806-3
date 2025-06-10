@@ -32,7 +32,7 @@ require_once 'app/views/templates/header.php';
     </div>
 
     <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-10">
-        <a href="/home/portfolio" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-md shadow transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+        <a href="/home/portfolio" class="bg-blue-500 inline-block hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-md shadow transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             View Portfolio
         </a>
         <a href="/home/contact"
@@ -44,7 +44,7 @@ require_once 'app/views/templates/header.php';
 
     <div class="text-center lg:text-left mt-8">
         <a href="/logout" 
-           class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-2.5 px-6 rounded-md shadow transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+           class="inline-block bg-red-500 hover:bg-red-700 text-white border border-gray-300 font-semibold py-3 px-8 rounded-md shadow transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">
             Logout
         </a>
     </div>
